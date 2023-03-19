@@ -1,7 +1,7 @@
 {% extends 'basic.html' %}
 
 {% block title %} Contact-US{% endblock title %}
-
+{% block contactactive %} active {% endblock contactactive %}
 {% block body %}
 
  <form action="/contact" method="post"> {% csrf_token %}
