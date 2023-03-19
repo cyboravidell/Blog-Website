@@ -10,6 +10,9 @@ def blogpage(request):
     return render(request, 'Blog/blogpage.html', context)
     # return HttpResponse("This is a blog page. we will start soon so stay tuned !")
 
-def blogpost(request):
-    return render(request, 'Blog/blogpost.html')
+def blogpost(request, slug):
+    print(slug)
+    post  = Post.objects.filter(slug=slug).first()
+    context = {"post" : post}
+    return render(request, 'Blog/blogpost.html', context)
     # return HttpResponse("This is blogpost : {slug}")

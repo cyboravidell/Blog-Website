@@ -3,5 +3,16 @@
 {% block title %} Blog-Post{% endblock title %}
 {% block blogactive %} active {% endblock blogactive %}
 {% block body %}
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro maiores distinctio libero voluptatum doloribus exercitationem veniam nobis perferendis, voluptates ipsa nemo voluptatibus quidem, numquam quasi sequi nisi amet soluta excepturi, molestiae recusandae non! Minima nostrum, explicabo tempore error minus animi excepturi laboriosam labore deserunt praesentium, ipsam aut quas tempora consectetur!</p>
+<div class="container my-3">
+    <div class="blog-post">
+        <h2 class="blog-post-title">
+            {{post.title}}
+        </h2>
+        <p class="blog-post-meta">
+            {{post.Timestamp}} by <a href ="#">{{post.author}}</a>
+        </p>
+        <p>{{post.content}}</p>
+        <hr>
+    </div>
+</div>
 {% endblock body %}
