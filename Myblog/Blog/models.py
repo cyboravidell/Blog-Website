@@ -15,7 +15,7 @@ class Post(models.Model):
         return "Posted by "+ self.author + " - " + self.title
 
 class BlogComment(models.Model):
-    sno = models.AutoField(primary_key=True)
+    postSno = models.AutoField(primary_key=True)
     comment = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
